@@ -21,6 +21,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media only screen and (max-width: $bp-smallest) {
+    flex-wrap: wrap;
+    align-content: space-around;
+    height: 11rem;
+  }
 }
 
 .content {
@@ -52,7 +58,13 @@
   border-bottom: var(--line);
 
   @media only screen and (max-width: $bp-medium) {
-    padding: 3rem;
+    padding: 2rem;
+    margin-right: 3rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column;
+    margin-right: 0;
   }
 }
 
@@ -66,6 +78,11 @@
   @media only screen and (max-width: $bp-medium) {
     padding: 2rem;
     margin-right: 3rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    margin-right: 0;
+    margin-bottom: 3rem;
   }
 }
 
